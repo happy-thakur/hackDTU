@@ -1,0 +1,93 @@
+<header class="cd-header">
+	<div class="heading-left">
+		00/00
+	</div>
+
+	<div class="heading-right">
+		<div class="title">
+			<p (click)="startPractice('english')" >English</p>
+		</div>
+		<div class="title">
+			<p (click)="startPractice('quantitaive')" >Quantitaive</p>
+		</div>
+		<div class="title">
+			<p (click)="startPractice('reasoning')" >Reasoning</p>
+		</div>
+		<div class="title">
+			<p (click)="startPractice('gk')" >GK</p>
+		</div>
+	</div>
+</header>
+<main class="cd-main-content">
+  <div class="cd-product-intro" *ngIf="!practice" >
+    <h1>Start Practicing</h1>
+    <p>Pactice more and become expert..
+      <br>"Practice Makes the man perfect".
+    <div class="cd-triggers">
+      <a (click)="startPractice('random')" class="btn salmon" data-type="cd-tour">Start</a>
+    </div>
+  </div>
+  <!-- cd-product-intro -->
+
+  <!-- <div class="moreInfo">
+  	something to display...
+  </div> -->
+  <div id="cd-product-tour" *ngIf="practice" >
+  	<i class="fa fa-times" aria-hidden="true"></i>
+    <ul>
+      <li class="cd-single-item cd-active">
+        <div class="cd-caption">
+          <h2>What a great feature</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus praesentium, quis ab iusto possimus quaerat perspiciatis voluptas obcaecati ipsam autem.
+          </p>
+        </div>
+        <div class="cd-image-container">
+          <div>
+            <div class="cd-phone-frame"></div>
+            <div class="cd-image-wrapper">
+              <img src="../assets/img/screen-1.png" data-video="video/video-1" alt="Screen Preview 1">
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="cd-single-item cd-not-visible cd-move-right">
+        <div class="cd-caption">
+          <h2>This one is even better</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus praesentium, quis ab iusto possimus quaerat perspiciatis voluptas obcaecati ipsam autem.
+          </p>
+        </div>
+        <div class="cd-image-container">
+          <div>
+            <div class="cd-phone-frame"></div>
+            <div class="cd-image-wrapper">
+              <img src="../assets/img/screen-2.png" data-video="video/video-2" alt="Screen Preview 2">
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="cd-single-item cd-not-visible cd-move-right">
+        <div class="cd-caption">
+          <h2>Feature number 3</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus praesentium, quis ab iusto possimus quaerat perspiciatis voluptas obcaecati ipsam autem.
+          </p>
+        </div>
+        <div class="cd-image-container">
+          <div>
+            <div class="cd-phone-frame"></div>
+            <div class="cd-image-wrapper">
+              <img src="../assets/img/screen-3.png" data-video="video/video-3" alt="Screen Preview 3">
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- cd-product-tour -->
+  <div class="cd-slider-nav">
+    <a class="cd-prev">Previous</a>
+    <a class="cd-next">Next</a>
+  </div>
+  <!-- cd-slider-nav -->
+  <div class="cd-loader"></div>
+  <!-- top loading bar -->
+</main>

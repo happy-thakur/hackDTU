@@ -1,0 +1,53 @@
+<div class="container">
+	
+<div class="loading" style="display: flex; justify-content: center; align-content: center; height: 100vh; position: fixed; width: 100%; background: white; z-index: 5;" *ngIf="loading" >
+	<h2>Loading...</h2>
+</div>
+<h2>Upload</h2>
+
+<div class="row">
+	<select name="cat" required="true" [(ngModel)]="cat" (change)="getSubCat()" id="cat">
+		<option value="Category">Category</option>
+		<option value="GK">GK</option>
+		<option value="Reasoning">Reasoning</option>
+		<option value="Quantitative">Quantitative</option>
+		<option value="English">English</option>
+	</select>
+</div>
+
+<div class="row" *ngIf="subCat.length">
+	<select required="true" [(ngModel)]="subCategory" name="subcat" id="subcat">
+		<option value="Sub category">Sub category</option>
+		<!-- fetch the data.. -->
+		<option *ngFor="let item of subCat" value="{{item}}">{{item}}</option>
+	</select>
+</div>
+
+<div>
+	<div class="row">
+		<h3>Question</h3>
+	<textarea required="true" name="ques" id="ques" [(ngModel)]="question['ques']" cols="30" placeholder="Enter question here"></textarea>
+	<input required="true" type="file" (change)="uploadFile('ques', $event)">
+	</div>
+<div class="row">
+	<h3>Options:</h3>
+	<div class="row" style="border: 0px">
+		<div class="col-sm-6"> 1 - <input type="text" required="true" [(ngModel)]="question['options']['1']" placeholder="Enter option 1"></div>
+		<div class="col-sm-6"> 2 - <input type="text" required="true" [(ngModel)]="question['options']['2']" placeholder="Enter option 2"></div>
+	</div>
+
+	<div class="row" style="border: 0px">		
+		<div class="col-sm-6"> 3 - <input type="text" required="true" [(ngModel)]="question['options']['3']" placeholder="Enter option 3"></div>
+		<div class="col-sm-6"> 4 - <input type="text" required="true" [(ngModel)]="question['options']['4']" placeholder="Enter option 4"></div>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Explaination</h3>
+	<input type="text" required="true" [(ngModel)]="answer['ans']" placeholder="Enter Ans" style="margin: 10px 0px;" placeholder="Ex. 1 or 2 if more than one then weprate them by comma">
+	<textarea name="explain" required="true" [(ngModel)]="answer['explaination']" id="explain" cols="30" rows="10" placeholder="Explain your ans. If no explaination then write 'Comming soon..'"></textarea>
+	<input type="file" (change)="uploadFile('ans', $event)">
+</div>
+	<input type="button" (click)="postData()" class="btn" value="submit">
+</div>
+</div>

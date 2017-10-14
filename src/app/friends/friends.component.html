@@ -1,0 +1,49 @@
+<!-- main page to submit info.. -->
+
+
+<div class="driver" *ngIf="mode == 'driver' || mode == 'both'" >
+	
+<!-- truck driver.. -->
+
+<input type="text" [(ngModel)]="vehicle" placeholder="vehicle No.">
+
+<!-- select source -->
+<input type="text" [(ngModel)]="source" placeholder="Enter Source">
+<!-- select destination -->
+<input type="text" [(ngModel)]="destination" placeholder="Enter Destination">
+<!-- width of truck -->
+<input type="text" [(ngModel)]="width" placeholder="Enter width of vehicle">
+<!-- height -->
+<input type="text" [(ngModel)]="height" placeholder="Enter height of vehicle">
+<!-- weight -->
+
+<input type="text" [(ngModel)]="Weight" placeholder="Enter the Max weight ">
+<p>*max weight that the vehicle can afford..</p>
+
+<button (click)="submitD()" >Submit</button>
+
+</div>
+
+<div class="customer" *ngIf="mode == 'customer' || mode == 'both'">
+	
+
+<!-- truck driver.. -->
+<!-- select source -->
+<input type="text" [(ngModel)]="source" placeholder="Enter Source">
+<!-- select destination -->
+<input type="text" [(ngModel)]="destination" placeholder="Enter Destination">
+<!-- width of truck -->
+<input type="text" [(ngModel)]="width" placeholder="Total Expected width covered by lugguge">
+<!-- height -->
+<input type="text" [(ngModel)]="height" placeholder="Total Expected height covered by lugguge">
+<!-- weight -->
+
+<input type="text" [(ngModel)]="weight" placeholder="Total Expected weight of lugguge ">
+<p>*total max weight of all the luggage.</p>
+
+<button (click)="submitC()" >Submit</button>
+
+</div>
+<div class="both">
+	
+</div>

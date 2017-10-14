@@ -1,0 +1,14 @@
+
+div.user-info div.row div {
+    font-size: 30px;
+    padding: 5px;
+}
+
+div.user-info div.row div:nth-child(2n) {
+
+    color: #f58780;
+}
+
+div.cd-triggers .btn:hover {
+    color: white;
+}

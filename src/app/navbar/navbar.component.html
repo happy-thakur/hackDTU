@@ -1,0 +1,15 @@
+
+<!-- page to get extra info.. -->
+
+<div class="main-container">
+  <div class="content">
+    <select id="select" #sel (change)="doIt(sel.value)" >
+        <option value="Customer">Customer</option>
+        <option value="Delivery man">Delivery man</option>
+        <option value="Both">Both</option>
+    </select>
+    <input type="text" [(ngModel)]="adhaar" placeholder="Adhaar No.">
+    <input type="text" [(ngModel)]="phone"  placeholder="Phone No.">
+    <button (click)="allDone()" >Get Started..</button>
+  </div>
+</div>

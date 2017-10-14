@@ -1,0 +1,22 @@
+textarea {
+    resize: none;
+    height: 150px;
+    width: 60%;
+}
+
+.row {
+    margin: 22px 10px;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.8);
+    /* border-radius: 5px; */
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+input[type="text"] {
+    /* display: block; */
+    width: 60%;
+}
+
+body {
+    background: white !important;
+}

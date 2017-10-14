@@ -1,0 +1,44 @@
+.cd-header {
+	top: 100px;
+    left: 60px;
+    width: 95%;
+    /* background: rebeccapurple; */
+    padding: 5px 10px;
+    height: 100px;
+    background: #3f435f;
+    z-index: 1;
+}
+
+.heading-right {
+	display: inline-block;
+	float: right;
+	width: 80%;
+}
+
+div.heading-left {
+	display: inline-block;
+	float: left;
+	font-size: 55px;
+    line-height: 100px;
+}
+
+div.heading-right .title {
+    line-height: 100px;
+	font-size: 20px;
+	text-align: center;
+	width: 120px;
+	display: inline-block;
+	float: right;
+}
+div.heading-right .title p {
+	cursor: pointer;
+}
+div.heading-right .title p:hover {
+ 	color: white;
+}
+
+@media only screen and (max-width: 1070px) {
+	.cd-main-content {
+		margin-top: 100px;
+	}
+}
